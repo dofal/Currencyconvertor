@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+:root {
+  /* white-mode */
+  --l-header: white;
+  --l-background: white;
+  --l-workspace: white;
+  /* black mode */
+  --b-header: #374045;
+  --b-background: #374045;
+  --b-workspace: #374045;
+}
+:focus {
+  outline: none;
+}
+body{
+  font-family: "Varela Round", sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  
+}
+.app{
+  margin: 0;
+  padding: 0;
+}
+#light-mode{
+  background-color: white;
+}
+#dark-mode{
+  background-color: darkslategray;
+}
+h1{
+  font-size: 42px;
+}
+h2{
+  font-size: 33px;
+}
+h6{
+  font-family: "Varela Round", sans-serif;
+  font-weight:inherit;
+  font-size: 11px;
+  color: rgb(22, 22, 22);
+}
+
+/* Header styling */
+.header{
+  z-index: 99;
+  display: flex;
+  height: 12vh;
+  overflow: hidden;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+#light-mode .header{
+  background-color: var(--l-header);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 29px -5px;
+}
+#dark-mode .header{
+  background-color: var(--b-header);
+  box-shadow: hsl(61, 100%, 60%) 0px 0px 29px -5px;
+}
+.logo{
+  width: fit-content;
+}
+#dark-mode .logo{
+  color: white;
+}
+.dark-mode{
+  width: fit-content;
+}
+/* End of header styling */
+
+/* Main styling */
+.main-background{
+  height: 88vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#light-mode .main-background{
+  background-color: var(--l-background);
+}
+#dark-mode .main-background{
+  background-color: var(--b-background);
+}
+
+.icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: orange;
+}
+
+.main-workspace{
+  min-height: 40vh;
+  width: 55%;
+  padding: 60px;
+  border-radius: 15px;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#light-mode .main-workspace{
+  background-color: var(--l-workspace);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 29px -5px;
+}
+#dark-mode .main-workspace{
+  background-color: var(--b-workspace);
+  color: white;
+  box-shadow: hsl(61, 100%, 60%) 0px 0px 29px -5px;
+}
+.input1{
+  width: 40%;
+  order: 0;
+}
+#right.input1{
+  order: 2;
+}
+.input2{
+  width: 40%;
+  order: 2;
+}
+#right.input2{
+  order: 0;
+}
+
+.switchicon{
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  order: 1;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.amount_div{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.1) 1px 1px 8px 5px;
+}
+.amount{
+  padding: 25px 30px;
+  width: 100%;
+  border-radius: 5px;
+  border-style: none;
+  border-width: 1px;
+  padding-right: 5px;
+  font-size: 16px;
+  font-family: "Varela Round", sans-serif;
+}
+#light-mode .amount{
+  background-color: #ffffff;
+}
+#dark-mode .amount{
+  background-color: #31383b;
+  color: white;
+}
+
+.currency_div{
+  width: fit-content;
+  width: 100%;
+  padding-bottom: 10px;
+}
+#dark-mode .currency_div{
+  color: black;
+}
+.currency{
+  padding: 25px 30px !important;
+  border-radius: 5px;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 16px;
+  font-family: "Varela Round", sans-serif;
+}
+#light-mode .currency{
+  background-color: #374045;
+  color: white;
+}
+.exchangeicon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  padding-top:15px;
+  padding-bottom: 15px;
+}
+.footer{
+  min-height: 8vh;
+}
+#light-mode .footer{
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 29px -5px;
+}
+#dark-mode .footer{
+  background-color: var(--b-workspace);
+  box-shadow: hsl(61, 100%, 60%) 0px 0px 29px -5px;
+  color: white;
+}
+
+.calculation{
+  text-align: center;
+}
+
+.switch_icon{
+  background-color: #374045;
+  padding: 8px;
+  border-radius: 60px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+  margin-top: -100px;
+}
+
+#light-mode .switch_icon{
+  background-color: #374045;
+  color: white;
+}
+
+#dark-mode .switch_icon{
+  background-color: white;
+  color: #374045;
+  box-shadow: #374045 0px 0px 0px 10px;
+}
+
+.select{
+  display: flex;
+  align-items: center;
+}
+.select-img{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  
+}
+.select-text{
+  display: flexbox;
+  padding-left: 5px;
+}
+.react-select{
+  color: black;
+}
+.amount_tips{
+  padding-top: 15px;
+  padding-bottom: 0px;
+  padding-left: 5px;
+}
+button{
+  font-family: "Varela Round", sans-serif;
+  color: black;
+  font-size: 12px;
+  background-color: white;
+  padding: 8px;
+  border-radius: 10px;
+  margin-left: 5px;
+  border: none;
+  box-shadow: rgba(100, 100, 111, 0.1) 1px 1px 8px 5px;
+}
+
+img{
+  border-radius: 3px;
+  box-shadow: rgba(100, 100, 111, 0.1) 1px 1px 8px 5px;
+}
