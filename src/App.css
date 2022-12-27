@@ -142,6 +142,7 @@ h6{
 .amount_div{
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   border-radius: 5px;
   box-shadow: rgba(100, 100, 111, 0.1) 1px 1px 8px 5px;
@@ -267,4 +268,11 @@ button{
 img{
   border-radius: 3px;
   box-shadow: rgba(100, 100, 111, 0.1) 1px 1px 8px 5px;
+}
+
+.currency_symbol{
+  font-size: 18px;
+  text-align: center;
+  padding: 10px;
+  padding-right: 25px;
 }

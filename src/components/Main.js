@@ -239,6 +239,14 @@ const Main = (props) => {
     function format(number){
         return number.toFixed(4)
     }
+    const numberFormat = (value, currency) =>
+        new Intl.NumberFormat('en-IN', {
+            style: 'currency',
+            currency: currency,
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 6,
+            
+        }).format(value);
     
     const options = (
         Object.keys(symbols).map((currency => (  
@@ -249,20 +257,20 @@ const Main = (props) => {
 
     function handleAmount1Change(amount1){
         SetAmount1(amount1);
-        SetAmount2(format(amount1 * rates[currency2] / rates[currency1]));
+        SetAmount2(amount1 * rates[currency2] / rates[currency1]);
         SetText("Change one side...");
     }
     function handleCurrency1Change(currency1){
         SetCurrency1(currency1)
-        SetAmount2(format(amount1 * rates[currency2] / rates[currency1]))
+        SetAmount2(amount1 * rates[currency2] / rates[currency1])
     }
     function handleAmount2Change(amount2){
         SetAmount2(amount2);
-        SetAmount1(format(amount2 * rates[currency1] / rates[currency2]))
+        SetAmount1(amount2 * rates[currency1] / rates[currency2])
     }
     function handleCurrency2Change(currency2){
         SetCurrency2(currency2)
-        SetAmount1(format(amount2 * rates[currency1] / rates[currency2]))
+        SetAmount1(amount2 * rates[currency1] / rates[currency2])
     }
     const Switch = () => {
         Setview((curr) => (curr === 'right' ? '' : 'right'));

@@ -1,12 +1,19 @@
-import PropTypes from "prop-types";
+import PropTypes, { number } from "prop-types";
 import Select from "react-select";
 import getSymbolFromCurrency from 'currency-symbol-map';
+import { NumberFormatBase, NumericFormat } from 'react-number-format';
 
 const Input1 = (props) =>{
 
     function format(number){
         return number.toFixed(6)
     }
+    const numberFormat = (value) =>
+        new Intl.NumberFormat('en-US', {
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 4,
+            
+        }).format(value);
 
     
 
@@ -26,7 +33,8 @@ const Input1 = (props) =>{
                 isClearable={true}/>
          </div>
          <div className="amount_div">
-            <input type="text" className="amount" value={props.amount} placeholder="1" onChange={ev => props.onAmountChange(ev.target.value)}/>
+            <input type="text" className="amount" value={numberFormat(props.amount)} placeholder="1" onChange={ev => props.onAmountChange(ev.target.value.replaceAll(",", ""))}/>
+            <span className="currency_symbol">{getSymbolFromCurrency(props.currency)}</span>
         </div>
         <div className="amount_tips">
         
