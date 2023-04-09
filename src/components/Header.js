@@ -5,11 +5,11 @@ import ReactSwitch from 'react-switch';
 const Header = (props) => {
   return (
     
-<div class="header" id={props.theme}>
-    <div class="logo">
+<div className="header" id={props.theme}>
+    <div className="logo">
         <h1>Currencyconvertor</h1>
     </div>
-    <div class="dark-mode">
+    <div className="dark-mode">
         <ReactSwitch
         height={40}
         width={70}
